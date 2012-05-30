@@ -38,10 +38,13 @@ class Bot(irc.IRCClient):
         return self.factory.nickname
     nickname = property(_get_nickname)
 
+    _sentQueue = []
+
     def signedOn(self):
         self.join(self.factory.channel)
         self.channel = self.factory.channel
         protocols.append(self)
+        self.lineRate = 0.0
         print "Signed on as %s." % self.nickname
 
     def connectionLost(self, reason):
@@ -155,6 +158,21 @@ class Bot(irc.IRCClient):
             self.act( user, channel, msg[1:] )
         elif msg.startswith('lunchbot: '):
             self.act( user, channel, msg[10:] )
+
+    def irc_NOTICE(self, prefix, params):
+        if params[1] == '*** Message to %s throttled due to flooding' % (self.factory.channel):
+            self.lineRate += 0.1
+            self._queue.insert(0, self._sentQueue.pop())
+            if not self._queueEmptying:
+                self._sendLine()
+            print "Flooding detected, lineRate now at %0.1f seconds" % self.lineRate
+
+    def _reallySendLine(self, line):
+        if line.startswith('PRIVMSG '):
+            self._sentQueue.append(line)
+            if len(self._sentQueue) > 20:   # This value is arbitary that "feels like a sensible limit"
+                self._sentQueue.pop()
+        return irc.IRCClient._reallySendLine(self, line)
 
 def flatten_values(xs):
     for k,x in xs.items():
