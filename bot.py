@@ -29,6 +29,8 @@ menu = None
 
 protocols = []
 
+disabled_commands = []
+
 def maybe_int(x):
     try: return int(x)
     except: return -1   # bs
@@ -56,9 +58,11 @@ class Bot(irc.IRCClient):
 
     def act(self, user, channel, cmd):
         username = user.split('!',1)[0]
-        global orders, menu
+        global orders, menu, disabled_commands
         parts = cmd.split(' ',2)
         op = parts[0]
+        if op in disabled_commands:
+            return
         if op == 'help':
             self.msg(channel, '!help: show this message.')
             self.msg(channel, '!menu: show the menu.')
