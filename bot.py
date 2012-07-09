@@ -68,6 +68,7 @@ class Bot(irc.IRCClient):
             self.msg(channel, '!list: list current lunch orders')
             self.msg(channel, '!open <menu>: open orders for today, clear state')
             self.msg(channel, '!close: close orders')
+            self.msg(channel, '!msg <message>: Show a message on all channels')
 
         if op == 'order':
             if not menu:
@@ -167,6 +168,12 @@ class Bot(irc.IRCClient):
             msgAll('orders are now closed.');
             orders = {}
             menu = None
+
+        if op == 'msg':
+            if len(parts) < 2:
+                self.msg(channel, 'you didn\'t specify what you want to message');
+                return
+            msgAll('<%s> %s' % (username, ' '.join(parts[1:])));
 
     def privmsg(self, user, channel, msg):
         print 'channel: `%s` user: `%s` msg: `%s`' % (user, channel, msg)
