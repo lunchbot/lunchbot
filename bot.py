@@ -9,19 +9,25 @@ from twisted.words.protocols import irc
 orders = {}
 menus = {
     'lbq': [
-        [ 'Quesadilla (needs 3 options)' , 'cheese and your choice of 3 fillings in a toasted tortilla with sour cream. Fillings are: smoky chicken, chorizo, salami, jalapenos, tomato, spinach, roasted red peppers, red onion, chipotle sauce, pesto, mozzarella, blue cheese, cream cheese, brie, feta. $12' ],
-        [ 'Vegetable curry' , 'Paneer, chickpea and vegetable curry with rice and beer naan. $15' ],
-        [ 'Steak & stout pie' , 'Steak and cheddar pie with craft stout gravy and shoestring fries. $17' ],
-        [ 'Chicken salad' , 'Harissa marinated chicken salad with roasted beetroot, rocket, grilled halloumi and walnuts in a citrus vinaigrette. $16' ],
-        [ 'Fish & chips' , 'Emerson\'s Pilsner battered fish and chips with housemade sauces and salad greens. $19' ],
-        [ 'Open chicken sandwich' , 'spicy marinated chicken breast with melted brie, salad greens, caramelised onions and garlic mayonnaise on sourdough served with shoestring fries and aioli. $18' ],
-        [ 'Beef burger' , '220g beef patty, streaky bacon, onion rings, roasted beetroot and cheddar with beer-battered chunky fries and aiolo. $19' ],
-        [ 'Margherita pizza' , 'fresh basil, cherry tomatoes, mozzarella and tomato sauce. $14' ],
-        [ 'Beer garden pizza' , 'spinach, roasted pumpkin, pinenuts, rocket pesto and feta cheese. $16' ],
-        [ 'Smokin\' chicken pizza' , 'smoked chicken breast, red onions, jalapenos with cream cheese and smoky chipotle BBQ sauce. $18' ],
-        [ 'Spicy sausage pizza' , 'pepperoni, chorizo and mozzarella with sundried tomato pesto. $18' ],
-        [ 'Four wheel drive pizza' , 'peppered steak, field mushrooms, rocket and blue cheese. $19' ],
-        [ 'Pizza of the day' , 'our chef\'s culinary creation. p.o.a' ]
+        [ 'Soup of the day', 'Soup of the day with fresh bread. $12' ],
+        [ 'Creamy garlic mushrooms', 'Creamy garlic mushrooms with graid bread. $13 or with bacon $16' ],
+        [ 'Chicken salad' , 'Grilled chicken salad with feta, olives, tomatoes, cucumber and rocket. $16' ],
+        [ 'Tofu stir fry', 'Marinated tofu and green vegetable stir fry on savoury rice. $17' ],
+        [ 'Chicken sandwich', 'Peri peri chicken sandwich on a wholemeal bap with roasted red pepper coulis, tomato, red onion, mesclun, shoestrings and aioli. $18' ],
+        [ 'Fish & chips', 'Emerson\'s Pilsner battered fish and chips with housemade sauces and salad greens. $19' ],
+        [ 'Beef burger', '220g beef patty, streaky bacon, onion rings, chilli jam and cheddar with shorestring fries and aioli. $20' ],
+        [ 'Fish of the day', 'Pan fried fish of the day with grilled summer vegetables and lemon oil. $22' ],
+        [ 'Steak', 'Steak with sauce du jour, hand-cut kumara chips and house salad. $26' ],
+        [ 'Sour pizza' , 'slow roasted roma tomatoes, lemon oil, balsamic reduction and aged cheddar. $15' ],
+        [ 'Sweet pizza' , 'house manuka smoked chicken, brie and orange honey sauce. $16' ],
+        [ 'Spicy pizza' , 'Harrington\'s pepperoni, jalapenos, red capsicum and chilli oil. $15' ],
+        [ 'Salty pizza' , 'capers, olives, halloumi and roasted red pepper coulis. $15' ],
+        [ 'Bitter pizza' , 'black-peppered beef, smokey bbq sauce, spinach and blue cheese. $17' ],
+        [ 'Fromage pizza' , 'tomato sauce, mozzarella, cheddar and parmesan with our cheese of the week. $15' ],
+        [ 'Fungi pizza' , 'portobello, swiss brown mushrooms with forest mushroom sauce and shaved parmesan. $14' ],
+        [ 'Ice cream' , 'Wooden Spoon Freezery\'s craft beer ice cream. $9' ],
+        [ 'Cheese plate' , 'aged cheddar, brie and blue cheese with nuts, toasted bread and accompaniments. $16' ],
+        [ 'Dessert of the week' , 'SURPRISE!!!' ],
     ]
 }
 
