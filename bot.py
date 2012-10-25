@@ -203,19 +203,15 @@ class Bot(irc.IRCClient):
 
     def irc_RPL_NAMREPLY(self, prefix, params):
         self.users[params[2]] = params[3].split(' ')
-        print self.users
 
     def userJoined(self, user, channel):
         self.users[channel].append(user)
-        print self.users
 
     def userLeft(self, user, channel):
         self.users[channel].remove(user)
-        print self.users
 
     def userKicked(self, user, channel, kicker, message):
         self.users[channel].remove(user)
-        print self.users
 
     def userRenamed(self, olduser, newuser):
         # TODO: change orders as well
@@ -225,7 +221,6 @@ class Bot(irc.IRCClient):
                 self.users[l].append(newuser)
             except:
                 pass
-        print self.users
 
     def userQuit(self, user, reason):
         for l in self.users:
@@ -233,7 +228,6 @@ class Bot(irc.IRCClient):
                 l.remove(user)
             except:
                 pass
-        print self.users
 
     def _reallySendLine(self, line):
         if line.startswith('PRIVMSG '):
