@@ -47,6 +47,7 @@ class Bot(irc.IRCClient):
     nickname = property(_get_nickname)
 
     _sentQueue = []
+    users = {}
 
     def signedOn(self):
         self.join(self.factory.channel)
@@ -199,6 +200,40 @@ class Bot(irc.IRCClient):
             if not self._queueEmptying:
                 self._sendLine()
             print "Flooding detected, lineRate now at %0.1f seconds" % self.lineRate
+
+    def irc_RPL_NAMREPLY(self, prefix, params):
+        self.users[params[2]] = params[3].split(' ')
+        print self.users
+
+    def userJoined(self, user, channel):
+        self.users[channel].append(user)
+        print self.users
+
+    def userLeft(self, user, channel):
+        self.users[channel].remove(user)
+        print self.users
+
+    def userKicked(self, user, channel, kicker, message):
+        self.users[channel].remove(user)
+        print self.users
+
+    def userRenamed(self, olduser, newuser):
+        # TODO: change orders as well
+        for l in self.users:
+            try:
+                self.users[l].remove(olduser)
+                self.users[l].append(newuser)
+            except:
+                pass
+        print self.users
+
+    def userQuit(self, user, reason):
+        for l in self.users:
+            try:
+                l.remove(user)
+            except:
+                pass
+        print self.users
 
     def _reallySendLine(self, line):
         if line.startswith('PRIVMSG '):
