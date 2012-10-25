@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python
 
 """A really simple IRC bot."""
 
@@ -35,7 +35,7 @@ menu = None
 
 protocols = []
 
-disabled_commands = []
+disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
 
 def maybe_int(x):
     try: return int(x)
@@ -80,6 +80,7 @@ class Bot(irc.IRCClient):
             self.msg(channel, '!open <menu>: open orders for today, clear state')
             self.msg(channel, '!close: close orders')
             self.msg(channel, '!msg <message>: Show a message on all channels')
+            self.msg(channel, '!notordered: Show a list of users that have not ordered')
 
         if op == 'order':
             if not menu:
@@ -186,6 +187,13 @@ class Bot(irc.IRCClient):
                 return
             msgAll('<%s> %s' % (username, ' '.join(parts[1:])));
 
+        if op == 'notordered':
+            if not menu:
+                self.msg(channel, 'orders are not open')
+                return
+
+            self.msg(channel, 'The following have not ordered anything: %s' % (', '.join(map(str, list(set(self.users[channel]) - set(orders.keys()))))))
+
     def privmsg(self, user, channel, msg):
         print 'channel: `%s` user: `%s` msg: `%s`' % (user, channel, msg)
         if msg.startswith('!'):
@@ -203,9 +211,11 @@ class Bot(irc.IRCClient):
 
     def irc_RPL_NAMREPLY(self, prefix, params):
         self.users[params[2]] = params[3].split(' ')
+        self.users[params[2]].remove(self.nickname)
 
     def userJoined(self, user, channel):
-        self.users[channel].append(user)
+        if user != self.nickname:
+            self.users[channel].append(user)
 
     def userLeft(self, user, channel):
         self.users[channel].remove(user)
@@ -235,6 +245,10 @@ class Bot(irc.IRCClient):
             if len(self._sentQueue) > 20:   # This value is arbitary that "feels like a sensible limit"
                 self._sentQueue.pop()
         return irc.IRCClient._reallySendLine(self, line)
+
+    def lineReceived(self, line):
+        print line
+        irc.IRCClient.lineReceived(self, line)
 
 def flatten_values(xs):
     for k,x in xs.items():
