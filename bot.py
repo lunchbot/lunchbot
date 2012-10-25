@@ -6,6 +6,10 @@ import sys
 from twisted.internet import reactor, protocol
 from twisted.words.protocols import irc
 
+from smtplib import SMTP
+from email.mime.text import MIMEText
+
+
 orders = {}
 menus = {
     'lbq': [
@@ -30,6 +34,16 @@ menus = {
         [ 'Dessert of the week' , 'SURPRISE!!!' ],
     ]
 }
+
+emails = {
+    'lbq': [
+        'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
+        'Hugh Davenport <hugh@catalyst.net.nz>'
+    ]
+}
+
+fromemail = 'Lunchbot (Hugh Davenport) <hugh@catalyst.net.nz>'
+toemail = None
 
 menu = None
 
@@ -65,7 +79,7 @@ class Bot(irc.IRCClient):
 
     def act(self, user, channel, cmd):
         username = user.split('!',1)[0]
-        global orders, menu, disabled_commands
+        global orders, menu, disabled_commands, toemail
         parts = cmd.split(' ',2)
         op = parts[0]
         if op in disabled_commands:
@@ -81,6 +95,7 @@ class Bot(irc.IRCClient):
             self.msg(channel, '!close: close orders')
             self.msg(channel, '!msg <message>: Show a message on all channels')
             self.msg(channel, '!notordered: Show a list of users that have not ordered')
+            self.msg(channel, '!send: Send a mailing of the order to the restaurant')
 
         if op == 'order':
             if not menu:
@@ -173,6 +188,7 @@ class Bot(irc.IRCClient):
             if parts[1] not in menus:
                 self.msg(channel, '%s is not a known menu.' % (parts[1],))
             menu = menus[parts[1]]
+            toemail = emails[parts[1]]
             orders = {}
             msgAll('orders are now open for %s!' % (parts[1],))
 
@@ -180,6 +196,7 @@ class Bot(irc.IRCClient):
             msgAll('orders are now closed.');
             orders = {}
             menu = None
+            toemail = None
 
         if op == 'msg':
             if len(parts) < 2:
@@ -193,6 +210,39 @@ class Bot(irc.IRCClient):
                 return
 
             self.msg(channel, 'The following have not ordered anything: %s' % (', '.join(map(str, list(set(self.users[channel]) - set(orders.keys()))))))
+
+        if op == 'send':
+            if not menu:
+                self.msg(channel, 'orders are not open')
+                return
+
+            if len(orders) == 0:
+                self.msg(channel, 'nothing has been ordered!')
+                return
+
+            global fromemail
+
+            body = '%d orders for today:' \
+                % (sum(len(v) for _,v in orders.items()))
+            by_type = pivot_to_values(flatten_values(orders))
+            for o,n in sorted(by_type.items(), key=lambda x:len(x[1])):
+                instr = o[1] and '(%s) ' % (o[1],) or ''
+                body += '\n%dx %s %s[%s]' % \
+                    (len(n), menu[o[0]][0], instr, ','.join(n))
+            body += '\n-- end of orders --\n';
+
+            self.msg(channel, body)
+
+            msg = MIMEText(body)
+            msg['Subject'] = 'Order for today'
+            msg['From'] = fromemail
+            msg['To'] = ', '.join(map(str, toemail))
+
+            s = SMTP('localhost')
+            s.sendmail(fromemail, toemail, msg.as_string())
+            s.quit()
+
+            msgAll('orders have been sent to %s.' % toemail)
 
     def privmsg(self, user, channel, msg):
         print 'channel: `%s` user: `%s` msg: `%s`' % (user, channel, msg)
@@ -247,7 +297,7 @@ class Bot(irc.IRCClient):
         return irc.IRCClient._reallySendLine(self, line)
 
     def lineReceived(self, line):
-        print line
+        #print line
         irc.IRCClient.lineReceived(self, line)
 
 def flatten_values(xs):
