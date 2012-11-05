@@ -50,6 +50,7 @@ menu = None
 protocols = []
 
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
+ignore_nick = ['superspring']
 
 def maybe_int(x):
     try: return int(x)
@@ -81,8 +82,9 @@ class Bot(irc.IRCClient):
         username = user.split('!',1)[0]
         if channel == self.nickname:
             channel = username
-            username = self.nickname
-        global orders, menu, disabled_commands, toemail
+        global orders, menu, disabled_commands, toemail, ignore_nick
+        if username in ignore_nick:
+            return
         parts = cmd.split(' ',2)
         op = parts[0]
         if op in disabled_commands:
