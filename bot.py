@@ -79,6 +79,9 @@ class Bot(irc.IRCClient):
 
     def act(self, user, channel, cmd):
         username = user.split('!',1)[0]
+        if channel == self.nickname:
+            channel = username
+            username = self.nickname
         global orders, menu, disabled_commands, toemail
         parts = cmd.split(' ',2)
         op = parts[0]
