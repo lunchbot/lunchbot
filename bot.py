@@ -227,14 +227,16 @@ class Bot(irc.IRCClient):
 
             global fromemail
 
-            body = '%d orders for today:' \
+            body = 'Hi, would we be able to make a booking for 12:15\n'
+            body += '%d orders for today:' \
                 % (sum(len(v) for _,v in orders.items()))
             by_type = pivot_to_values(flatten_values(orders))
             for o,n in sorted(by_type.items(), key=lambda x:len(x[1])):
                 instr = o[1] and '(%s) ' % (o[1],) or ''
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
-            body += '\n-- end of orders --\n';
+            body += '\n-- end of orders --\n'
+            body += 'Cheers, Hugh\n027 694 6639\n';
 
             self.msg(channel, body)
 
