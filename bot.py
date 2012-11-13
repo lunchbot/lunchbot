@@ -50,7 +50,7 @@ menu = None
 protocols = []
 
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
-ignore_nick = ['superspring']
+ignore_nick = []
 
 def maybe_int(x):
     try: return int(x)
