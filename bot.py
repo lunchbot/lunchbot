@@ -32,14 +32,22 @@ menus = {
         [ 'Ice cream' , 'Wooden Spoon Freezery\'s craft beer ice cream. $9' ],
         [ 'Cheese plate' , 'aged cheddar, brie and blue cheese with nuts, toasted bread and accompaniments. $16' ],
         [ 'Dessert of the week' , 'SURPRISE!!!' ],
-    ]
+    ],
+    'arizona': [
+        [ 'Arizona Beef Burger', '200 gram grilled beef patty with bacon, cheese, mesclun, tomato, gherkins, barbeque chipotle sauce and roasted garlic mayo in a bug, served with chunky fries. $19.50' ],
+        [ 'Chicken Burger', 'Grilled chicken breast with mesclun, tomato, avacado and roasted garlic mayo in a bin, served with chunky fries. $20'],
+    ],
 }
 
 emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Hugh Davenport <hugh@catalyst.net.nz>'
-    ]
+        'Hugh Davenport <hugh@catalyst.net.nz>',
+    ],
+    'arizona': [
+        'Arizona <cu@arizona.co.nz>',
+        'Hugh Davenport <hugh@catalyst.net.nz>',
+    ],
 }
 
 fromemail = 'Lunchbot (Hugh Davenport) <hugh@catalyst.net.nz>'
