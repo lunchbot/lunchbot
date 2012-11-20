@@ -59,6 +59,16 @@ protocols = []
 
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
 ignore_nick = []
+admin_nick = [ 'aquaman',
+               'aquaghost',
+               'aqualaptop',
+               'superspring',
+               'heiko',
+               'haddock',
+               'wi11',
+             ]
+admin_commands = [ 'send',
+                 ]
 
 def maybe_int(x):
     try: return int(x)
@@ -96,6 +106,9 @@ class Bot(irc.IRCClient):
         parts = cmd.split(' ',2)
         op = parts[0]
         if op in disabled_commands:
+            return
+        if op in admin_commands and not username in admin_nick:
+            self.msg(channel, 'sorry you are not an admin')
             return
         if op == 'help':
             self.msg(channel, '!help: show this message.')
