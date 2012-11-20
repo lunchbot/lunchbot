@@ -100,7 +100,7 @@ class Bot(irc.IRCClient):
         username = user.split('!',1)[0]
         if channel == self.nickname:
             channel = username
-        global orders, menu, disabled_commands, toemail, ignore_nick
+        global orders, menu, disabled_commands, toemail, ignore_nick, admin_nick, admin_commands
         if username in ignore_nick:
             return
         parts = cmd.split(' ',2)
@@ -271,6 +271,13 @@ class Bot(irc.IRCClient):
             s.quit()
 
             msgAll('orders have been sent to %s.' % toemail)
+
+        if op == 'isadmin':
+            if len(parts) < 2:
+                self.msg(channel, 'yes, you are an admin' if username in admin_nick else 'no, you are not an admin')
+                return
+            self.msg(channel, 'yes, %s is an admin' % (parts[1]) if parts[1] in admin_nick else 'no, %s is not an admin' % (parts[1]))
+
 
     def privmsg(self, user, channel, msg):
         print 'channel: `%s` user: `%s` msg: `%s`' % (user, channel, msg)
