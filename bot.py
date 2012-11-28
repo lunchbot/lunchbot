@@ -211,6 +211,7 @@ class Bot(irc.IRCClient):
                 self.msg(channel, 'you didn\'t specify a menu. valid menus are:');
                 for mn in menus.keys():
                     self.msg(channel, '* %s' % (mn,))
+                return
             if parts[1] not in menus:
                 self.msg(channel, '%s is not a known menu.' % (parts[1],))
             menu = menus[parts[1]]
