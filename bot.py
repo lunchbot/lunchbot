@@ -249,7 +249,11 @@ class Bot(irc.IRCClient):
 
             global fromemail
 
-            body = 'Hi, would we be able to make a booking for 12:15\n'
+            if len(parts) > 1:
+                time = parts[1]
+            else:
+                time = '12:15'
+            body = 'Hi, would we be able to make a booking for %s\n' % time
             body += '%d orders for today:' \
                 % (sum(len(v) for _,v in orders.items()))
             by_type = pivot_to_values(flatten_values(orders))
