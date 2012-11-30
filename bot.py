@@ -250,9 +250,9 @@ class Bot(irc.IRCClient):
             global fromemail
 
             if len(parts) > 1:
-                time = parts[1]
+                time = parts[1:]
             else:
-                time = '12:15'
+                time = 'today 12:15'
             body = 'Hi, would we be able to make a booking for %s\n' % time
             body += '%d orders for today:' \
                 % (sum(len(v) for _,v in orders.items()))
@@ -267,7 +267,7 @@ class Bot(irc.IRCClient):
             self.msg(channel, body)
 
             msg = MIMEText(body)
-            msg['Subject'] = 'Order for today'
+            msg['Subject'] = 'Order for %s' % time
             msg['From'] = fromemail
             msg['To'] = ', '.join(map(str, toemail))
 
