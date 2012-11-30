@@ -33,6 +33,18 @@ menus = {
         [ 'Cheese plate' , 'aged cheddar, brie and blue cheese with nuts, toasted bread and accompaniments. $16' ],
         [ 'Dessert of the week' , 'SURPRISE!!!' ],
     ],
+    'lbqxmas': [
+        [ 'ENTREE: soup', 'Tomato and fresh herb soup with fresh bread' ],
+        [ 'ENTREE: pesto chicken', 'Grilled pesto chicken with feta, cucumber and tomato' ],
+        [ 'ENTREE: garlic prawns', 'Garlic prawns with chilli, aioli and house salad' ],
+        [ 'MAIN: courgette and cumin fritters', 'Courgette and cumin fritters with tomato chilli relish and radish, watercress and citrus fruit salad' ],
+        [ 'MAIN: chicken roulade', 'Herb chicken roulade with grilled summer vegetables and roast red pepper coulis' ],
+        [ 'MAIN: fish of the day', 'Pan-fried fish of the day with grilled summer vegetables and balsamic reduction' ],
+        [ 'MAIN: steak', 'Stack with mushroom peppercorn sauch, house salad and kumara chips' ],
+        [ 'DESSERT: beery ice cream', 'Wooden Spoon Freezery\'s beery ice cream with chocolate sauce' ],
+        [ 'DESSERT: cheesecake', 'Baked dark chocolate and stout cheesecake with whipped cream' ],
+        [ 'DESSERT: trifle', 'Summer fruit trifle of Victoria spounge, vanilla custard and sherry' ],
+    ],
     'arizona': [
         [ 'Arizona Beef Burger', '200 gram grilled beef patty with bacon, cheese, mesclun, tomato, gherkins, barbeque chipotle sauce and roasted garlic mayo in a bug, served with chunky fries. $19.50' ],
         [ 'Chicken Burger', 'Grilled chicken breast with mesclun, tomato, avacado and roasted garlic mayo in a bin, served with chunky fries. $20'],
