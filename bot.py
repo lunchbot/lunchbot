@@ -56,6 +56,10 @@ emails = {
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Hugh Davenport <hugh@catalyst.net.nz>',
     ],
+    'lbqxmas': [
+        'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
+        'Hugh Davenport <hugh@catalyst.net.nz>',
+    ],
     'arizona': [
         'Arizona <cu@arizona.co.nz>',
         'Hugh Davenport <hugh@catalyst.net.nz>',
