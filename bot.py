@@ -252,7 +252,7 @@ class Bot(irc.IRCClient):
                 self.msg(channel, 'orders are not open')
                 return
 
-            self.msg(channel, 'The following have not ordered anything: %s' % (', '.join(map(str, list(set(self.users[channel]) - set(orders.keys())))))[1:-1])
+            self.msg(channel, 'The following have not ordered anything: %s' % (', '.join(map(str, list(set(self.users[channel]) - set(orders.keys()))))[1:-1]))
 
         if op == 'send':
             if not menu:
