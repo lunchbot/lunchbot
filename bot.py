@@ -66,7 +66,7 @@ emails = {
     ],
 }
 
-fromemail = 'Lunchbot (Hugh Davenport) <hugh@catalyst.net.nz>'
+fromemail = 'Dinnerbot (Hugh Davenport) <hugh@catalyst.net.nz>'
 toemail = None
 
 menu = None
@@ -268,7 +268,7 @@ class Bot(irc.IRCClient):
             if len(parts) > 1:
                 time = parts[1:]
             else:
-                time = 'today 12:15'
+                time = 'tonight 18:15'
             body = 'Hi, would we be able to make a booking for %s\n' % time
             body += '%d orders for today:' \
                 % (sum(len(v) for _,v in orders.items()))
@@ -374,7 +374,7 @@ def msgAll(msg):
 class BotFactory(protocol.ClientFactory):
     protocol = Bot
 
-    def __init__(self, channel, nickname='lunchbot'):
+    def __init__(self, channel, nickname='dinnerbot'):
         self.channel = channel
         self.nickname = nickname
 
@@ -386,6 +386,7 @@ class BotFactory(protocol.ClientFactory):
         print "Connection failed. Reason: %s" % reason
 
 if __name__ == "__main__":
-    reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
-    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
+    #reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
+    #reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
+    reactor.connectTCP('irc.perl.org', 6667, BotFactory('#wellington.pm'))
     reactor.run()
