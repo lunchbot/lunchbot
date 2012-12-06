@@ -55,18 +55,21 @@ emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Timothy Best <timb@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Timothy Best <timb@catalyst.net.nz>',
     ],
     'arizona': [
         'Arizona <cu@arizona.co.nz>',
         'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Timothy Best <timb@catalyst.net.nz>',
     ],
 }
 
-fromemail = 'Lunchbot (Hugh Davenport) <hugh@catalyst.net.nz>'
+fromemail = 'Lunchbot (Timothy Best) <timb@catalyst.net.nz>'
 toemail = None
 
 menu = None
@@ -278,7 +281,7 @@ class Bot(irc.IRCClient):
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
             body += '\n-- end of orders --\n'
-            body += 'Cheers, Hugh\n027 694 6639\n';
+            body += 'Cheers, Tim\n021 606 044\n';
 
             self.msg(channel, body)
 
