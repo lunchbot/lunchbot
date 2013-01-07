@@ -54,17 +54,17 @@ menus = {
 emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Hugh Davenport <hugh@davenport.net.nz>',
         'Timothy Best <timb@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Hugh Davenport <hugh@davenport.net.nz>',
         'Timothy Best <timb@catalyst.net.nz>',
     ],
     'arizona': [
         'Arizona <cu@arizona.co.nz>',
-        'Hugh Davenport <hugh@catalyst.net.nz>',
+        'Hugh Davenport <hugh@davenport.net.nz>',
         'Timothy Best <timb@catalyst.net.nz>',
     ],
 }
