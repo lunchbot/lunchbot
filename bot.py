@@ -280,7 +280,7 @@ class Bot(irc.IRCClient):
                 instr = o[1] and '(%s) ' % (o[1],) or ''
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
-            body += '\n-- end of orders --\n'
+            body += '\n\nThanks, Can we please get a reply to confirm this order?\n\n'
             body += 'Cheers, Tim\n021 606 044\n';
 
             self.msg(channel, body)
