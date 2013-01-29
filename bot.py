@@ -102,8 +102,9 @@ class Bot(irc.IRCClient):
     users = {}
 
     def signedOn(self):
-        self.join(self.factory.channel)
-        self.channel = self.factory.channel
+        for channel in self.factory.channels:
+          self.join(channel)
+        self.channels = self.factory.channels
         protocols.append(self)
         self.lineRate = 0.0
         print "Signed on as %s." % self.nickname
@@ -311,7 +312,7 @@ class Bot(irc.IRCClient):
             self.act( user, channel, msg[10:] )
 
     def irc_NOTICE(self, prefix, params):
-        if params[1] == '*** Message to %s throttled due to flooding' % (self.factory.channel):
+        if params[1] == '*** Message to %s throttled due to flooding' % (self.factory.channels):
             self.lineRate += 0.1
             self._queue.insert(0, self._sentQueue.pop())
             if not self._queueEmptying:
@@ -377,8 +378,8 @@ def msgAll(msg):
 class BotFactory(protocol.ClientFactory):
     protocol = Bot
 
-    def __init__(self, channel, nickname='lunchbot'):
-        self.channel = channel
+    def __init__(self, channels, nickname='lunchbot'):
+        self.channels = channels
         self.nickname = nickname
 
     def clientConnectionLost(self, connector, reason):
@@ -389,7 +390,6 @@ class BotFactory(protocol.ClientFactory):
         print "Connection failed. Reason: %s" % reason
 
 if __name__ == "__main__":
-    reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
-    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
-    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('##catalystlunch'))
+    reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory(['#lunch']))
+    reactor.connectTCP('irc.freenode.org', 6667, BotFactory(['#catalystlunch', '##catalystlunch']))
     reactor.run()
