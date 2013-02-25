@@ -390,6 +390,6 @@ class BotFactory(protocol.ClientFactory):
 
 if __name__ == "__main__":
     reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
-    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
+#    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
     reactor.connectTCP('irc.freenode.org', 6667, BotFactory('##catalystlunch'))
     reactor.run()
