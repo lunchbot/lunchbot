@@ -102,11 +102,10 @@ class Bot(irc.IRCClient):
     users = {}
 
     def signedOn(self):
-        for channel in self.factory.channels:
-          self.join(channel)
-        self.channels = self.factory.channels
+        self.join(self.factory.channel)
+        self.channel = self.factory.channel
         protocols.append(self)
-        self.lineRate = 0.5
+        self.lineRate = 0.0
         print "Signed on as %s." % self.nickname
 
     def connectionLost(self, reason):
@@ -137,12 +136,12 @@ class Bot(irc.IRCClient):
             self.msg(channel, '!order [<nick>] <n> <special instructions>: order your lunch. `no beetroot` etc can go in `special instructions`')
             self.msg(channel, '!cancel: cancel your order')
             self.msg(channel, '!list: list current lunch orders')
-            self.msg(channel, '!open <menu>: open orders for today, clear state')
-            self.msg(channel, '!close: close orders')
             self.msg(channel, '!msg <message>: Show a message on all channels')
             self.msg(channel, '!notordered: Show a list of users that have not ordered')
-            self.msg(channel, '!send: Send a mailing of the order to the restaurant')
-
+            if username in admin_nick:
+              self.msg(channel, '!open <menu>: open orders for today, clear state')
+              self.msg(channel, '!send: Send a mailing of the order to the restaurant')
+              self.msg(channel, '!close: close orders')
         if op == 'order':
             if not menu:
                 self.msg(channel, 'orders are not open.')
@@ -312,7 +311,7 @@ class Bot(irc.IRCClient):
             self.act( user, channel, msg[10:] )
 
     def irc_NOTICE(self, prefix, params):
-        if params[1] == '*** Message to %s throttled due to flooding' % (self.factory.channels[0]):
+        if params[1] == '*** Message to %s throttled due to flooding' % (self.factory.channel):
             self.lineRate += 0.1
             self._queue.insert(0, self._sentQueue.pop())
             if not self._queueEmptying:
@@ -378,8 +377,8 @@ def msgAll(msg):
 class BotFactory(protocol.ClientFactory):
     protocol = Bot
 
-    def __init__(self, channels, nickname='lunchbot'):
-        self.channels = channels
+    def __init__(self, channel, nickname='lunchbot'):
+        self.channel = channel
         self.nickname = nickname
 
     def clientConnectionLost(self, connector, reason):
@@ -390,6 +389,7 @@ class BotFactory(protocol.ClientFactory):
         print "Connection failed. Reason: %s" % reason
 
 if __name__ == "__main__":
-    reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory(['#lunch']))
-    reactor.connectTCP('irc.freenode.org', 6667, BotFactory(['##catalystlunch']))
+    reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
+    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
+    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('##catalystlunch'))
     reactor.run()
