@@ -54,9 +54,6 @@ class Bot(irc.IRCClient):
         if op in admin_commands and not username in admin_nick:
             self.msg(channel, 'sorry you are not an admin')
             return
-        if op == 'help':
-            self.msg(channel, '!help: show this message.')
-            self.msg(channel, '!curry [<message>]: notify CURRY. defaults to \'CURRY\'')
 
         if op == 'curry':
             message = len(parts) > 1 and ' '.join(parts[1:]) or "CURRY";
