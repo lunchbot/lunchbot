@@ -10,6 +10,7 @@ from twisted.words.protocols import irc
 protocols = []
 
 admin_nick = [ 'aquaman',
+               'aquaphone',
                'heytrav',
                'superspring',
                'curry-overlord',
