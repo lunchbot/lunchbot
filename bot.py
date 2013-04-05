@@ -13,25 +13,27 @@ from email.mime.text import MIMEText
 orders = {}
 menus = {
     'lbq': [
-        [ 'Soup of the day', 'Soup of the day with fresh bread. $12' ],
-        [ 'Creamy garlic mushrooms', 'Creamy garlic mushrooms with graid bread. $13 or with bacon $16' ],
-        [ 'Chicken salad' , 'Grilled chicken salad with feta, olives, tomatoes, cucumber and rocket. $16' ],
-        [ 'Tofu stir fry', 'Marinated tofu and green vegetable stir fry on savoury rice. $17' ],
-        [ 'Chicken sandwich', 'Peri peri chicken sandwich on a wholemeal bap with roasted red pepper coulis, tomato, red onion, mesclun, shoestrings and aioli. $18' ],
-        [ 'Fish & chips', 'Emerson\'s Pilsner battered fish and chips with housemade sauces and salad greens. $19' ],
-        [ 'Beef burger', '220g beef patty, streaky bacon, onion rings, chilli jam and cheddar with shorestring fries and aioli. $20' ],
-        [ 'Fish of the day', 'Pan fried fish of the day with grilled summer vegetables and lemon oil. $22' ],
-        [ 'Steak', 'Steak with sauce du jour, hand-cut kumara chips and house salad. $26' ],
-        [ 'Sour pizza' , 'slow roasted roma tomatoes, lemon oil, balsamic reduction and aged cheddar. $15' ],
-        [ 'Sweet pizza' , 'house manuka smoked chicken, brie and orange honey sauce. $16' ],
-        [ 'Spicy pizza' , 'Harrington\'s pepperoni, jalapenos, red capsicum and chilli oil. $15' ],
-        [ 'Salty pizza' , 'capers, olives, halloumi and roasted red pepper coulis. $15' ],
-        [ 'Bitter pizza' , 'black-peppered beef, smokey bbq sauce, spinach and blue cheese. $17' ],
-        [ 'Fromage pizza' , 'tomato sauce, mozzarella, cheddar and parmesan with our cheese of the week. $15' ],
-        [ 'Fungi pizza' , 'portobello, swiss brown mushrooms with forest mushroom sauce and shaved parmesan. $14' ],
-        [ 'Ice cream' , 'Wooden Spoon Freezery\'s craft beer ice cream. $9' ],
-        [ 'Cheese plate' , 'aged cheddar, brie and blue cheese with nuts, toasted bread and accompaniments. $16' ],
-        [ 'Dessert of the week' , 'SURPRISE!!!' ],
+        # Two for One Tuesday Menu Pizzas.
+        [ 'Beer Garden', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
+        [ 'Sweet & Sour Pork', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17'],
+        [ 'Funghi', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
+        [ 'Margherita', 'Basil pesto, Tomatoes & Mozzarella - $14'],
+        [ 'Spicy', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
+        [ 'Duck', 'Chinese 5-Spice roasted duck with Orange Honey sauce - $18'],
+        [ 'Chicken', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $16'],
+
+        # Mains.
+        [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot jam - $16'],
+        [ 'Cheesey LBQ Burger', 'Beef patty with aged cheddar, Tomato relish, APAioli, Lettuce, Tomato & Shoestring fries - $20'],
+        [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumera, Beetroot & Spinach pesto with Lemon dressing - $15.50'],
+        [ 'Chowder', 'Mixed Seafood with Potatoes, Carrots, Onions & Celery. Served with Seeded Bread - $17'],
+        [ 'Gnocchi', 'Kumera & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - $18.00'],
+        [ 'Pea, Pie & Pud', 'Handmade, ever changing, proper NZ pie.  Served with Mashed spuds (pud) & Peas - $18'],
+        [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette & Salad greens - $17'],
+        [ 'Steak Sandwich', 'Cooked medium rare & served on our own Seeded bread with Lettuce & Tomato. Served with fries - $19'],
+
+        # Unreal items.
+        [ 'Fish & chips', 'This is no longer a real item. It\'s sad, but we have to let go :( - $19' ],
     ],
     'lbqxmas': [
         [ 'ENTREE: soup', 'Tomato and fresh herb soup with fresh bread' ],
