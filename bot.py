@@ -31,9 +31,6 @@ menus = {
         [ 'Pea, Pie & Pud', 'Handmade, ever changing, proper NZ pie.  Served with Mashed spuds (pud) & Peas - $18'],
         [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette & Salad greens - $17'],
         [ 'Steak Sandwich', 'Cooked medium rare & served on our own Seeded bread with Lettuce & Tomato. Served with fries - $19'],
-
-        # Unreal items.
-        [ 'Fish & chips', 'This is no longer a real item. It\'s sad, but we have to let go :( - $19' ],
     ],
     'lbqxmas': [
         [ 'ENTREE: soup', 'Tomato and fresh herb soup with fresh bread' ],
