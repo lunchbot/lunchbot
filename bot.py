@@ -14,13 +14,13 @@ orders = {}
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
-        [ 'Beer Garden', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
-        [ 'Sweet & Sour Pork', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17'],
-        [ 'Funghi', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
-        [ 'Margherita', 'Basil pesto, Tomatoes & Mozzarella - $14'],
-        [ 'Spicy', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
-        [ 'Duck', 'Chinese 5-Spice roasted duck with Orange Honey sauce - $18'],
-        [ 'Chicken', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $16'],
+        [ 'Beer Garden Pizza', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
+        [ 'Sweet & Sour Pork Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17'],
+        [ 'Funghi Pizza', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
+        [ 'Margherita Pizza', 'Basil pesto, Tomatoes & Mozzarella - $14'],
+        [ 'Spicy Pizza', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
+        [ 'Duck Pizza', 'Chinese 5-Spice roasted duck with Orange Honey sauce - $18'],
+        [ 'Chicken Pizza', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $16'],
 
         # Mains.
         [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot jam - $16'],
