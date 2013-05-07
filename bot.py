@@ -133,18 +133,18 @@ class Bot(irc.IRCClient):
             self.msg(channel, 'sorry you are not an admin')
             return
         if op == 'help':
-            self.msg(channel, '!help: show this message.')
-            self.msg(channel, '!menu: show the menu.')
-            self.msg(channel, '!info <n>: show info for an item on the menu.')
-            self.msg(channel, '!order [<nick>] <n> <special instructions>: order your lunch. `no beetroot` etc can go in `special instructions`')
-            self.msg(channel, '!cancel: cancel your order')
-            self.msg(channel, '!list: list current lunch orders')
-            self.msg(channel, '!msg <message>: Show a message on all channels')
-            self.msg(channel, '!notordered: Show a list of users that have not ordered')
+            self.msg(channel, '- !help: show this message.')
+            self.msg(channel, '- !menu: show the menu.')
+            self.msg(channel, '- !info <n>: show info for an item on the menu.')
+            self.msg(channel, '- !order [<nick>] <n> <special instructions>: order your lunch. `no beetroot` etc can go in `special instructions`')
+            self.msg(channel, '- !cancel: cancel your order')
+            self.msg(channel, '- !list: list current lunch orders')
+            self.msg(channel, '- !msg <message>: Show a message on all channels')
+            self.msg(channel, '- !notordered: Show a list of users that have not ordered')
             if username in admin_nick:
-              self.msg(channel, '!open <menu>: open orders for today, clear state')
-              self.msg(channel, '!send: Send a mailing of the order to the restaurant')
-              self.msg(channel, '!close: close orders')
+              self.msg(channel, '- !open <menu>: open orders for today, clear state')
+              self.msg(channel, '- !send: Send a mailing of the order to the restaurant')
+              self.msg(channel, '- !close: close orders')
         if op == 'order':
             if not menu:
                 self.msg(channel, 'orders are not open.')
@@ -274,7 +274,7 @@ class Bot(irc.IRCClient):
             if len(parts) > 1:
                 time = parts[1:]
             else:
-                time = 'today 12:15'
+                time = 'today 12:15pm'
             body = 'Hi, would we be able to make a booking for %s\n' % time
             body += '%d orders for today:' \
                 % (sum(len(v) for _,v in orders.items()))
@@ -393,6 +393,5 @@ class BotFactory(protocol.ClientFactory):
 
 if __name__ == "__main__":
     reactor.connectTCP('irc.wgtn.cat-it.co.nz', 6667, BotFactory('#lunch'))
-#    reactor.connectTCP('irc.freenode.org', 6667, BotFactory('#catalystlunch'))
     reactor.connectTCP('irc.freenode.org', 6667, BotFactory('##catalystlunch'))
     reactor.run()
