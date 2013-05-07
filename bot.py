@@ -84,6 +84,8 @@ admin_nick = [ 'aquaman',
                'heiko',
                'haddock',
                'wi11',
+               'haydn',
+               'haydnn',
              ]
 admin_commands = [ 'send',
                  ]
@@ -279,8 +281,8 @@ class Bot(irc.IRCClient):
                 instr = o[1] and '(%s) ' % (o[1],) or ''
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
-            body += '\n\nThanks, Can we please get a reply to confirm this order?\n\n'
-            body += 'Cheers, Tim\n021 606 044\n';
+            body += '\n\nThanks, can we please get a reply to confirm this order?\n\n'
+            body += 'Cheers, Haydn\n021 032 8216';
 
             self.msg(channel, body)
 
