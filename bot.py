@@ -88,6 +88,8 @@ admin_nick = [ 'aquaman',
                'haydnn',
              ]
 admin_commands = [ 'send',
+                   'open',
+                   'close',
                  ]
 
 def maybe_int(x):
