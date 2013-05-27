@@ -27,7 +27,7 @@ menus = {
         [ 'Cheesey LBQ Burger', 'Beef patty with aged cheddar, Tomato relish, APAioli, Lettuce, Tomato & Shoestring fries - $20'],
         [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumera, Beetroot & Spinach pesto with Lemon dressing - $15.50'],
         [ 'Chowder', 'Mixed Seafood with Potatoes, Carrots, Onions & Celery. Served with Seeded Bread - $17'],
-        [ 'Gnocchi', 'Kumera & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - $18.00'],
+        [ 'Gnocchi', 'Kumara & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - $18.00'],
         [ 'Pea, Pie & Pud', 'Handmade, ever changing, proper NZ pie.  Served with Mashed spuds (pud) & Peas - $18'],
         [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette & Salad greens - $17'],
         [ 'Steak Sandwich', 'Cooked medium rare & served on our own Seeded bread with Lettuce & Tomato. Served with fries - $19'],
@@ -54,21 +54,21 @@ emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Hugh Davenport <hugh@davenport.net.nz>',
-        'Timothy Best <timb@catalyst.net.nz>',
+        'Haydn Newport <haydn@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Hugh Davenport <hugh@davenport.net.nz>',
-        'Timothy Best <timb@catalyst.net.nz>',
+        'Haydn Newport <haydn@catalyst.net.nz>',
     ],
     'arizona': [
         'Arizona <cu@arizona.co.nz>',
         'Hugh Davenport <hugh@davenport.net.nz>',
-        'Timothy Best <timb@catalyst.net.nz>',
+        'Haydn Newport <haydn@catalyst.net.nz>',
     ],
 }
 
-fromemail = 'Lunchbot (Timothy Best) <timb@catalyst.net.nz>'
+fromemail = 'Lunchbot (Haydn Newport) <haydn@catalyst.net.nz>'
 toemail = None
 
 menu = None
