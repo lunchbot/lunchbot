@@ -32,6 +32,16 @@ menus = {
         [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette & Salad greens - $17'],
         [ 'Steak Sandwich', 'Cooked medium rare & served on our own Seeded bread with Lettuce & Tomato. Served with fries - $19'],
     ],
+    'lbqthurs' : [
+        [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumara, Beetroot & pesto with Lemon dressing. V, GF. - $10, add Chorizo $5'],
+        [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves with Bleu cheese, Pear & Beetroot jam. V, GF. - $10, add Duck $6'],
+        [ 'Chicken Skewers - Spicy', 'BBQ or basil pesto with house salad and youhurt dipping sauce. GF. - $10'],
+        [ 'Chowder', 'Fresh mixed Seafood with Potatoes, Carrots, Onions & Celery. Served with Seeded Bread - $10'],
+        [ 'Gnocchi', 'Kumara & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts. V. - $10'],
+        [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette - $10'],
+        [ 'Margherita Pizza', 'Basil pesto, Roma tomatoes & Mozzarella. V. - $10'],
+        [ 'Chicken Pizza', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $10'],
+    ],
     'lbqxmas': [
         [ 'ENTREE: soup', 'Tomato and fresh herb soup with fresh bread' ],
         [ 'ENTREE: pesto chicken', 'Grilled pesto chicken with feta, cucumber and tomato' ],
