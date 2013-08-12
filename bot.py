@@ -15,22 +15,22 @@ menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
         [ 'Beer Garden Pizza', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
-        [ 'Sweet & Sour Pork Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17'],
+        [ 'Beef & Blue Cheese Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17.5'],
         [ 'Funghi Pizza', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
         [ 'Margherita Pizza', 'Basil pesto, Tomatoes & Mozzarella - $14'],
         [ 'Spicy Pizza', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
         [ 'Duck Pizza', 'Chinese 5-Spice roasted duck with Orange Honey sauce - $18'],
         [ 'Chicken Pizza', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $16'],
+        [ 'Pizza of the Day', 'Who knows! - $16'], #??? Maybe
 
         # Mains.
-        [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot jam - $16'],
-        [ 'Cheesey LBQ Burger', 'Beef patty with aged cheddar, Tomato relish, APAioli, Lettuce, Tomato & Shoestring fries - $20'],
-        [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumera, Beetroot & Spinach pesto with Lemon dressing - $15.50'],
-        [ 'Chowder', 'Mixed Seafood with Potatoes, Carrots, Onions & Celery. Served with Seeded Bread - $17'],
-        [ 'Gnocchi', 'Kumara & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - $18.00'],
-        [ 'Pea, Pie & Pud', 'Handmade, ever changing, proper NZ pie.  Served with Mashed spuds (pud) & Peas - $18'],
-        [ 'Pork sandwich', 'Pulled Roasted pork with Jus on Ciabatta bread served with Fried Gourmet Potatoes tossed in Vinaigrette & Salad greens - $17'],
-        [ 'Steak Sandwich', 'Cooked medium rare & served on our own Seeded bread with Lettuce & Tomato. Served with fries - $19'],
+        [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot - Available Small ($11) & Large ($16) and with Duck (Add $6)'],
+        [ 'Cheesey LBQ Burger', 'Beef & lamb patty with aged cheddar, Tomato relish, APAioli, Lettuce, red onion & Shoestring fries - $19'],
+        [ 'Winter Storehouse Orzotto', 'pearl barley risotto with roasted winter vegetables and earth green sauce - $22.5'],
+        [ 'Seafood Hotpot', 'plethora of seafood in bisque with fennel, saffron, spring onions, leek, potato and seaweed - $26' ],
+        [ 'Gnocchi', 'Kumara & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - Available Small ($12.5) & Large ($19)'],
+        [ 'BBQ Chicken Sandwich', 'house BBQ sauced chicken on ciabatta bread with lettuce, red onion, APAioli and shoestring fries - $18.5'],
+        [ 'Steak Sandwich', 'medium-rare steak served on our own beer-bread with lettuce, red onion, tomato relish, APAioli and shoestring fries - $19'],
     ],
     'lbqthurs' : [
         [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumara, Beetroot & pesto with Lemon dressing. V, GF. - $10, add Chorizo $5'],
