@@ -15,7 +15,7 @@ menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
         [ 'Beer Garden Pizza', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
-        [ 'Beef & Blue Cheese Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17.5'],
+        [ 'Beef & Bleu Cheese Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17.5'],
         [ 'Funghi Pizza', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
         [ 'Margherita Pizza', 'Basil pesto, Tomatoes & Mozzarella - $14'],
         [ 'Spicy Pizza', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
@@ -25,10 +25,10 @@ menus = {
 
         # Mains.
         [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot - Available Small ($11) & Large ($16) and with Duck (Add $6)'],
-        [ 'Cheesey LBQ Burger', 'Beef & lamb patty with aged cheddar, Tomato relish, APAioli, Lettuce, red onion & Shoestring fries - $19'],
+        [ 'Cheesy LBQ Burger', 'Beef & lamb patty with aged cheddar, Tomato relish, APAioli, Lettuce, red onion & Shoestring fries - $19'],
         [ 'Winter Storehouse Orzotto', 'pearl barley risotto with roasted winter vegetables and earth green sauce - $22.5'],
         [ 'Seafood Hotpot', 'plethora of seafood in bisque with fennel, saffron, spring onions, leek, potato and seaweed - $26' ],
-        [ 'Gnocchi', 'Kumara & Red Potato Gnocchi with Marinated feta, Spinach pesto & Toasted pine nuts - Available Small ($12.5) & Large ($19)'],
+        [ 'Gnocchi', 'Kumara & Red Potato Gnoccchi with Marinated feta, Spinach pesto & Toasted pine nuts - Available Small ($12.5) & Large ($19)'],
         [ 'BBQ Chicken Sandwich', 'house BBQ sauced chicken on ciabatta bread with lettuce, red onion, APAioli and shoestring fries - $18.5'],
         [ 'Steak Sandwich', 'medium-rare steak served on our own beer-bread with lettuce, red onion, tomato relish, APAioli and shoestring fries - $19'],
     ],
