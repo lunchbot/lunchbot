@@ -14,23 +14,22 @@ orders = {}
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
-        [ 'Beer Garden Pizza', 'Pumpkin, Pine nut, Spinach pesto, & Marinated feta - $16' ],
-        [ 'Beef & Bleu Cheese Pizza', 'Roasted Pork with Red Wine reduction & Sweet Chilli sauce - $17.5'],
-        [ 'Funghi Pizza', 'Forest Mushroom sauce with Portabellos, Swiss Browns & shaved Parmesan - $15'],
-        [ 'Margherita Pizza', 'Basil pesto, Tomatoes & Mozzarella - $14'],
-        [ 'Spicy Pizza', 'Harrington\'s chorizo, Jalapenos, Chilli flakes, Chilli oil & Red capsicum coulis. Choose your heat, House or Fire Dragon hot - $17'],
-        [ 'Duck Pizza', 'Chinese 5-Spice roasted duck with Orange Honey sauce - $18'],
-        [ 'Chicken Pizza', 'Smoked Paprika roasted chicken with BBQ sauce & Haloumi - $16'],
-        [ 'Pizza of the Day', 'Who knows! - $16'], #??? Maybe
+        [ 'Margaret & Rita', 'Sliced roma tomato with fresh basil and even fresher buffalo mozzarella. V - $15.90' ],
+        [ 'Good Ol\' Blue Bulls', 'Beef brisket braised in a beery BBQ sauce with roquette and bleu cheese. - $16.90' ],
+        [ 'Do they Call Me Guiseppe the Pizza Maker?', 'Olives, capsicum, red onion, cherry tomatoes, artichoke hearts and feta. V - $15.90' ],
+        [ 'Who Cut the Cheese?', 'Three cheese base with quadrants of bleu, brie, halloumi and gouda. V - $16.40' ],
+        [ 'Le Coq', 'Citrus marinated chicken with balsamic roasted onion, brie and boozy plum sauce. - $16.70' ],
+        [ 'Donald & Daisy go Asian', 'Duck with soy, orange, honey, hoisen and green peppercorn sauce with crunchy lettuce. - $18.10' ],
+        [ 'Humungus Fungus', 'Porcini, gourmet brown and button mushroom sauce with shitake, oyster, portobello and enoki mushrooms. V - $16.90' ],
+        [ 'Regresso Del Diablo', 'Spicy tomato sauce, chorizo, chilli flakes, chilli oil, jalapenos and capsicum. Choose your heat, house or fire dragon - $17.80' ],
 
-        # Mains.
-        [ 'Caramelised Walnut Salad', 'Mixed lettuce leaves, Bleu cheese, Pear & Beetroot - Available Small ($11) & Large ($16) and with Duck (Add $6)'],
-        [ 'Cheesy LBQ Burger', 'Beef & lamb patty with aged cheddar, Tomato relish, APAioli, Lettuce, red onion & Shoestring fries - $19'],
-        [ 'Winter Storehouse Orzotto', 'pearl barley risotto with roasted winter vegetables and earth green sauce - $22.5'],
-        [ 'Seafood Hotpot', 'plethora of seafood in bisque with fennel, saffron, spring onions, leek, potato and seaweed - $26' ],
-        [ 'Gnocchi', 'Kumara & Red Potato Gnoccchi with Marinated feta, Spinach pesto & Toasted pine nuts - Available Small ($12.5) & Large ($19)'],
-        [ 'BBQ Chicken Sandwich', 'house BBQ sauced chicken on ciabatta bread with lettuce, red onion, APAioli and shoestring fries - $18.5'],
-        [ 'Steak Sandwich', 'medium-rare steak served on our own beer-bread with lettuce, red onion, tomato relish, APAioli and shoestring fries - $19'],
+        # Mains
+        [ 'Pizza Bread', 'Sundried tomato pesto or garlic pizza bread. V  - $9.10' ],
+        [ 'Falafel Burger', 'Falafel patty with oven-roasted tomato, red onion, lettuce, aubergine, artichokes and balsamic reduction on seeded bun with fries. VG, DF - $17.80' ],
+        [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, garlic and soy French beans, avocado and tapenade with falafel. GF, VG, DF. - $21.90' ],
+        [ 'CousCous', 'Aubergine roasted with garlic, vine tomatoes, herbaceous couscous and red pepper coulis. DF,VG. - $21.20' ],
+        [ 'El Pollo Loco Burger', 'Mango chicken with brie, tomato, lettuce, red onion, boozy plum sauce on seeded bun with fries and APAioli. - $19.60' ],
+        [ 'Bacon CheeseBurger', 'Beef, beer and lamb patty, bacon, cheese, APAioli, tomato relish, onion jam, tomato, lettuce and onion with fries and APAioli. - $19.60' ]
     ],
     'lbqthurs' : [
         [ 'Chick Pea Salad', 'Warm salad of Carrot, Celery, Red cabbage, Kumara, Beetroot & pesto with Lemon dressing. V, GF. - $10, add Chorizo $5'],
