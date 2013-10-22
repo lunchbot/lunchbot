@@ -314,6 +314,12 @@ class Bot(irc.IRCClient):
                 return
             self.msg(channel, 'yes, %s is an admin' % (parts[1]) if parts[1] in admin_nick else 'no, %s is not an admin' % (parts[1]))
 
+        if op == 'thank' or op == 'thanks':
+            if len(parts) < 2:
+                self.msg(channel, 'No problem %s' % (username) )
+                return
+            self.msg(channel, 'Thanks %s! :)' % (parts[1]))
+
 
     def privmsg(self, user, channel, msg):
         print 'channel: `%s` user: `%s` msg: `%s`' % (user, channel, msg)
