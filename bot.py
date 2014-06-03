@@ -16,7 +16,7 @@ menus = {
         # Two for One Tuesday Menu Pizzas.
         [ 'Margaret & Rita', 'Sliced roma tomato with fresh basil and even fresher buffalo mozzarella. V - $15.90' ],
         [ 'Good Ol\' Blue Bulls', 'Beef brisket braised in a beery BBQ sauce with roquette and bleu cheese. - $16.90' ],
-        [ 'Do they Call Me Guiseppe the Pizza Maker?', 'Olives, capsicum, red onion, cherry tomatoes, artichoke hearts and feta. V - $15.90' ],
+        [ 'Do they Call Me Guiseppe the Pizza Maker?', 'Olives, capsicum, red onion, cherry tomatoes, artichoke hearts and feta. V [O: Add Salami +$2] - $15.90' ],
         [ 'Le Coq', 'Citrus marinated chicken with balsamic roasted onion, brie and boozy plum sauce. - $16.70' ],
         [ 'The Passion of the Crustacean', 'Prosciutto, prawns and rocket with passionfruit drizzle. - $17.90' ],
         [ 'Donald & Daisy go Asian', 'Duck with soy, orange, honey, hoisen and green peppercorn sauce with crunchy lettuce. - $18.10' ],
@@ -24,10 +24,12 @@ menus = {
         [ 'Regresso Del Diablo', 'Spicy tomato sauce, chorizo, chilli flakes, chilli oil, jalapenos and capsicum. Choose your heat, house or fire dragon - $17.80' ],
 
         # Mains
-        [ 'Mushroom Burger', 'Roasted portobello mushrooms with halloumi, roasted red peppers, tomato, lettuce, red onion in seeded bun with fries and tomato relish. V, VG on request - $19.60' ],
-        [ '\'Was There a Summer?\' Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, garlic and soy French beans, avocado and tapenade with halloumi. GF, VG, DF. - $21.90' ],
-        [ 'El Pollo Loco Burger', 'Mango chicken with brie, tomato, lettuce, red onion, boozy plum sauce on seeded bun with fries and APAioli. - $19.60' ],
-        [ 'Bacon Cheeseburger', 'Beef, beer and lamb patty, bacon, cheese, APAioli, tomato relish, onion jam, tomato, lettuce and onion with fries and APAioli. - $19.60' ]
+        [ 'The Fun-Guy Burger', 'Field mushrooms stuffed with puy lentil and blue cheese with  red peppers, swiss cheese, lettuce in seeded bun with fries and tomato chilli jam. V, VG on request - $18.50' ],
+        [ 'The Salad', 'Mixed leaf salad with shaved parmesan, kalamata olives, toasted pumpkin seeds, pine nuts and fig and pear chutney in a herb yoghurt dressing. GF, V. [O: Add Chicken and Bacon Lardons +$3] - $16.00' ],
+        [ 'Caesar\'s Chicken Burger', 'Grilled chicken breast, egg, bacon lardons, lettuce, shaved parmesan with a caesar dressing on seeded bun with fries and tomato chilli jam. - $19.00' ],
+        [ 'LBQ Burger', '200g lamb patty topped with swiss cheese, beer-battered onion rings, beetroot chutney,  lettuce and tomato chilli jam in a brioche bun with fries and APAioli. - $20.00' ],
+        [ 'Tuatara Battered Cish & Fips', 'Freshly battered fish fillets with salad, hand-cut chips, tartare sauce and lemon. - $22.50' ],
+        [ 'BBQ Glazed Ribs', '1 kg of slow-cooked pork ribs tossed in a BBQ sauce with aioli coleslaw and hand-cut fries. - $28.00' ]
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
