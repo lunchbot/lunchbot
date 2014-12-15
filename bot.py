@@ -16,20 +16,18 @@ menus = {
         # Two for One Tuesday Menu Pizzas.
         [ 'Margaret & Rita', 'Sliced roma tomato with fresh basil and even fresher buffalo mozzarella. V - $15.90' ],
         [ 'Good Ol\' Blue Bulls', 'Beef brisket braised in a beery BBQ sauce with roquette and bleu cheese. - $16.90' ],
-        [ 'Do they Call Me Guiseppe the Pizza Maker?', 'Olives, capsicum, red onion, cherry tomatoes, artichoke hearts and feta. V [O: Add Salami +$2] - $15.90' ],
-        [ 'Le Coq', 'Citrus marinated chicken with balsamic roasted onion, brie and boozy plum sauce. - $16.70' ],
-        [ 'The Passion of the Crustacean', 'Prosciutto, prawns and rocket with passionfruit drizzle. - $17.90' ],
+        [ 'Return of the Spicy Chicken', 'Citrus marinated chicken with balsamic roasted onion, brie and boozy plum sauce. small - $16.70' ],
         [ 'Donald & Daisy go Asian', 'Duck with soy, orange, honey, hoisen and green peppercorn sauce with crunchy lettuce. - $18.10' ],
-        [ 'Humungus Fungus', 'Porcini, gourmet brown and button mushroom sauce with shitake, oyster, portobello and enoki mushrooms. V - $16.90' ],
-        [ 'Regresso Del Diablo', 'Spicy tomato sauce, chorizo, chilli flakes, chilli oil, jalapenos and capsicum. Choose your heat, house or fire dragon - $17.80' ],
+        [ 'Beer Garden 2', 'Feta, kalamata olives, pine nuts, pumpkin seeds, rocket and topped with basil. V - $16.20' ],
+        [ 'Three Little Piggies', 'Bacon, glazed ham, chorizo with beer-braised caramelised onions and bbq sauce - $17.60' ],
 
         # Mains
-        [ 'The Fun-Guy Burger', 'Field mushrooms stuffed with puy lentil and blue cheese with  red peppers, swiss cheese, lettuce in seeded bun with fries and tomato chilli jam. V, VG on request - $18.50' ],
-        [ 'The Salad', 'Mixed leaf salad with shaved parmesan, kalamata olives, toasted pumpkin seeds, pine nuts and fig and pear chutney in a herb yoghurt dressing. GF, V. [O: Add Chicken and Bacon Lardons +$3] - $16.00' ],
-        [ 'Caesar\'s Chicken Burger', 'Grilled chicken breast, egg, bacon lardons, lettuce, shaved parmesan with a caesar dressing on seeded bun with fries and tomato chilli jam. - $19.00' ],
-        [ 'LBQ Burger', '200g lamb patty topped with swiss cheese, beer-battered onion rings, beetroot chutney,  lettuce and tomato chilli jam in a brioche bun with fries and APAioli. - $20.00' ],
-        [ 'Tuatara Battered Cish & Fips', 'Freshly battered fish fillets with salad, hand-cut chips, tartare sauce and lemon. - $22.50' ],
-        [ 'BBQ Glazed Ribs', '1 kg of slow-cooked pork ribs tossed in a BBQ sauce with aioli coleslaw and hand-cut fries. - $28.00' ]
+        [ 'Summer Salad', 'Pan-fried halloumi, Israeli couscous, orange, rocket and kalamata olive salad with pine nuts, seeds and citrus vinaigrette.  GF,V [O: Add Grilled Chicken +$4] - $16.00' ],
+        [ 'The Vegan Burger', 'Tofu, beetroot and bean burger in a vegan bun with tomato-chilli jam, hummus, caramelised onions, lettuce and fries. VG [O: Add Haloumi +$3.5] - $16.50' ],
+        [ 'Cajun Chicken burger', 'Spiced chicken, melted cheese, chilli jam, avocado, slaw and rocket on a brioche bun with hand-cut chips. - $18.00' ],
+        [ 'Beef, Bacon and Vintage Cheddar Burger ', '200g beef patty topped with cheddar, bacon, tomato, beetroot, lettuce and tomato-chilli jam in a brioche bun with fries and Panhead Port Road Pilsner aioli. - $19.00' ],
+        [ 'Panhead Battered Fish & Chips', 'Freshly battered gurnard fish fillets with salad, twice cooked chips, tartare sauce and  a lemon wedge. - $16 small, $22.50 large (old size)' ],
+        [ 'Open Steak Sandwich', 'Sirloin steak, vintage cheddar, beer-braised onions, chilli jam, mesclun and Panhead Port Road Pislner aioli with fries. - $20.00' ]
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
@@ -93,6 +91,7 @@ admin_nick = [ 'aquaman',
                'wi11',
                'haydn',
                'haydnn',
+               'florent'
              ]
 admin_commands = [ 'send',
                    'open',
