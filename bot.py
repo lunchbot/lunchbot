@@ -3,6 +3,7 @@
 """A really simple IRC bot."""
 
 import sys
+import re
 from twisted.internet import reactor, protocol
 from twisted.words.protocols import irc
 
@@ -11,23 +12,31 @@ from email.mime.text import MIMEText
 
 
 orders = {}
+needs_size = {
+    'lbq': range(0,8) + [11,]
+}
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
-        [ 'Margaret & Rita', 'Sliced roma tomato with fresh basil and even fresher buffalo mozzarella. V - $15.90' ],
-        [ 'Good Ol\' Blue Bulls', 'Beef brisket braised in a beery BBQ sauce with roquette and bleu cheese. - $16.90' ],
-        [ 'Return of the Spicy Chicken', 'Citrus marinated chicken with balsamic roasted onion, brie and boozy plum sauce. small - $16.70' ],
-        [ 'Donald & Daisy go Asian', 'Duck with soy, orange, honey, hoisen and green peppercorn sauce with crunchy lettuce. - $18.10' ],
-        [ 'Beer Garden 2', 'Feta, kalamata olives, pine nuts, pumpkin seeds, rocket and topped with basil. V - $16.20' ],
-        [ 'Three Little Piggies', 'Bacon, glazed ham, chorizo with beer-braised caramelised onions and bbq sauce - $17.60' ],
+        [ 'Margaret & Rita', 'Sliced tomato with fresh basil and even fresher buffalo mozzarella. V - $19.90' ],
+        [ 'The Uncle Dave', 'Margarita with jalapeno, chilli flakes and hot sauce. V - $20.00' ],
+        [ 'Blue Bulls', 'Steak and lamb with rocket and blue cheese and smokey BBQ sauce. - $22.90' ],
+        [ 'Spicy Chicken', 'Cajun chicken, spicy chorizo, jalapeno, chilli flakes, sliced tomato and cream cheese. - $22.90' ],
+        [ 'Donald & Daisy', 'Roast duck with hoisin and toppped with crunchy lettuce. - $23.50' ],
+        [ 'I Am The Eggplant', 'Grilled eggplant, halloumi, olives, caramelised onion and rocket - $23.50' ],
+        [ 'Beer Garden', 'Feta, kalamata olives, pine nuts, pumpkin seeds and roast beetroot topped with basil. V - $23.50' ],
+        [ 'Three Little Piggies', 'Bacon, glazed ham, chorizo with beer-braised caramelised onions and bbq sauce - $23.50' ],
 
         # Mains
-        [ 'Summer Salad', 'Pan-fried halloumi, Israeli couscous, orange, rocket and kalamata olive salad with pine nuts, seeds and citrus vinaigrette.  GF,V [O: Add Grilled Chicken +$4] - $16.00' ],
-        [ 'The Vegan Burger', 'Tofu, beetroot and bean burger in a vegan bun with tomato-chilli jam, hummus, caramelised onions, lettuce and fries. VG [O: Add Haloumi +$3.5] - $16.50' ],
-        [ 'Cajun Chicken burger', 'Spiced chicken, melted cheese, chilli jam, avocado, slaw and rocket on a brioche bun with hand-cut chips. - $18.00' ],
-        [ 'Beef, Bacon and Vintage Cheddar Burger ', '200g beef patty topped with cheddar, bacon, tomato, beetroot, lettuce and tomato-chilli jam in a brioche bun with fries and Panhead Port Road Pilsner aioli. - $19.00' ],
-        [ 'Panhead Battered Fish & Chips', 'Freshly battered gurnard fish fillets with salad, twice cooked chips, tartare sauce and  a lemon wedge. - $16 small, $22.50 large (old size)' ],
-        [ 'Open Steak Sandwich', 'Sirloin steak, vintage cheddar, beer-braised onions, chilli jam, mesclun and Panhead Port Road Pislner aioli with fries. - $20.00' ]
+        [ 'Soup of the Day', 'Changes daily. Served with fresh bread and butter. - $12.00' ],
+        [ 'Winter Salad', 'Roasted season veg with garlic gree beans, feta cheese and candied walnuts, dressed with a fig and balsamic vinaigrette. V [O: Add grilled lamb +$5] - $18.00' ],
+        [ 'Patrick the Gnome Pie', 'Changes often. Served with a suitable side. - $POA' ],
+        [ 'Panhead Pilsner Battered Fish & Chips', 'Market fish, beer battered with salad, hand-cut chips, tartare sauce and a lemon wedge. - $16 small, $22.50 large' ],
+        [ 'The Steak', '250g Porterhouse steak with sauteed mushrooms, beer braised onions, green beans and Stonecutter gravy on the side. - $24' ],
+        [ 'Bean Burger', 'Bean burger topped with field mushroom and halloumi with mesclun, tomato-chilli jam and aioli in a ciabatta bun w/ fries. V - $17.50' ],
+        [ 'Chicken Parma Burger', 'Chicken breast, parmaham, mozzarella, rocket, pesto mayo and tomato-chilli jam on a leeds st brioche bun w/ fries. - $18.50' ],
+        [ 'Lamb Sandwich', 'Ciabatta, rosemary and garlic lamb rump, mesclun, tomato, feta, hummus and tzatiki w/fries - $20.00' ],
+        [ 'LBQ Beef and Bacon Burger ', 'Leeds St brioche bun, Stonecutter marinated beef patty, swiss cheese, tomato, gherkin and crisp lettuce with tomato-chilli jam, LBQ burger sauce and fries - $20.00' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
@@ -83,14 +92,12 @@ protocols = []
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
 ignore_nick = []
 admin_nick = [ 'aquaman',
-               'aquaghost',
                'aqualaptop',
-               'superspring',
                'heiko',
-               'haddock',
                'wi11',
                'haydn',
                'haydnn',
+               'kaotien',
                'florent'
              ]
 admin_commands = [ 'send',
@@ -142,7 +149,7 @@ class Bot(irc.IRCClient):
             self.msg(channel, '- !help: show this message.')
             self.msg(channel, '- !menu: show the menu.')
             self.msg(channel, '- !info <n>: show info for an item on the menu.')
-            self.msg(channel, '- !order [<nick>] <n> <special instructions>: order your lunch. `no beetroot` etc can go in `special instructions`')
+            self.msg(channel, '- !order [<nick>] <n> [<size (S|L)>] <special instructions>: order your lunch. `no beetroot` etc can go in `special instructions`')
             self.msg(channel, '- !cancel: cancel your order')
             self.msg(channel, '- !list: list current lunch orders')
             self.msg(channel, '- !msg <message>: Show a message on all channels')
@@ -170,6 +177,19 @@ class Bot(irc.IRCClient):
                 return
 
             special = len(parts) > 2 and parts[2] or None
+
+            if not special:
+                if item in needs_size['lbq']:
+                    special = 'Large please'
+            elif special and item in needs_size['lbq']:
+                if special.startswith(('s ','S ')) or special in ['s', 'S']:
+                    special = 'Small, {0}'.format(special[2:])
+                elif special.startswith(('L ','l ')) or special in ['l', 'L']:
+                    special = 'Large, {0}'.format(special[2:])
+                elif item in needs_size['lbq']:
+                    special = 'Large, {0}'.format(special)
+            if special and special.endswith(', '):
+                special = special[:-2]
 
             if not username in orders:
                 orders[username] = []
@@ -315,7 +335,8 @@ class Bot(irc.IRCClient):
             if len(parts) < 2:
                 self.msg(channel, 'No problem %s' % (username) )
                 return
-            self.msg(channel, 'Thanks %s! :)' % (parts[1]))
+            th_string = 'Th%s' % ( re.split('[^yaeiou]+', parts[1], maxsplit=1)[1] )
+            self.msg(channel, 'Thanks %s! %s' % (parts[1], th_string))
 
 
     def privmsg(self, user, channel, msg):
