@@ -13,30 +13,29 @@ from email.mime.text import MIMEText
 
 orders = {}
 needs_size = {
-    'lbq': range(0,8) + [11,]
+   'lbq': range(0,5)
 }
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
-        [ 'Margaret & Rita', 'Sliced tomato with fresh basil and even fresher buffalo mozzarella. V - $19.90' ],
-        [ 'The Uncle Dave', 'Margarita with jalapeno, chilli flakes and hot sauce. V - $20.00' ],
-        [ 'Blue Bulls', 'Steak and lamb with rocket and blue cheese and smokey BBQ sauce. - $22.90' ],
-        [ 'Spicy Chicken', 'Cajun chicken, spicy chorizo, jalapeno, chilli flakes, sliced tomato and cream cheese. - $22.90' ],
-        [ 'Donald & Daisy', 'Roast duck with hoisin and toppped with crunchy lettuce. - $23.50' ],
-        [ 'I Am The Eggplant', 'Grilled eggplant, halloumi, olives, caramelised onion and rocket - $23.50' ],
-        [ 'Beer Garden', 'Feta, kalamata olives, pine nuts, pumpkin seeds and roast beetroot topped with basil. V - $23.50' ],
-        [ 'Three Little Piggies', 'Bacon, glazed ham, chorizo with beer-braised caramelised onions and bbq sauce - $23.50' ],
+        [ 'Margaret & Rita', 'Sliced tomato with fresh basil and even fresher buffalo mozzarella. V - $20' ],
+        [ 'The Old Bean', 'Pork belly, pickled chilli, coriander, mozzarella and tomato. V - $24' ],
+        [ 'I Am The Eggplant', 'Grilled eggplant, halloumi, salsa, cherry tomatos, mozzarella. - $23' ],
+        [ 'Wheel of Pork', 'Bacon, prosciutto, pork belly, confit onions, BBQ sauce. - $24' ],
+        [ '"Not When We\'re Busy"', 'Lamb, rosemary, confit onions, goats feta, garlic oil, cherry tomato, mozzarella. - $24.50' ],
+        [ 'Gnome Garden', 'Roasted pumpkin, toasted seeds, goats feta, pickled red onion, tomato, mozzarella. - $22.50' ],
 
         # Mains
-        [ 'Soup of the Day', 'Changes daily. Served with fresh bread and butter. - $12.00' ],
-        [ 'Winter Salad', 'Roasted season veg with garlic gree beans, feta cheese and candied walnuts, dressed with a fig and balsamic vinaigrette. V [O: Add grilled lamb +$5] - $18.00' ],
-        [ 'Patrick the Gnome Pie', 'Changes often. Served with a suitable side. - $POA' ],
-        [ 'Panhead Pilsner Battered Fish & Chips', 'Market fish, beer battered with salad, hand-cut chips, tartare sauce and a lemon wedge. - $16 small, $22.50 large' ],
-        [ 'The Steak', '250g Porterhouse steak with sauteed mushrooms, beer braised onions, green beans and Stonecutter gravy on the side. - $24' ],
-        [ 'Bean Burger', 'Bean burger topped with field mushroom and halloumi with mesclun, tomato-chilli jam and aioli in a ciabatta bun w/ fries. V - $17.50' ],
-        [ 'Chicken Parma Burger', 'Chicken breast, parmaham, mozzarella, rocket, pesto mayo and tomato-chilli jam on a leeds st brioche bun w/ fries. - $18.50' ],
-        [ 'Lamb Sandwich', 'Ciabatta, rosemary and garlic lamb rump, mesclun, tomato, feta, hummus and tzatiki w/fries - $20.00' ],
-        [ 'LBQ Beef and Bacon Burger ', 'Leeds St brioche bun, Stonecutter marinated beef patty, swiss cheese, tomato, gherkin and crisp lettuce with tomato-chilli jam, LBQ burger sauce and fries - $20.00' ],
+        [ 'Mussels', 'A dozen steamed green lip mussels with white wine cream, fresh salsa and Leeds St sourdough. - $19' ],
+        [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad and grilled lemon. - $22.50' ],
+        [ 'Ham & Smoked Swiss Cheese Toasted Sandwich', 'On Leeds St sourdough, with sauerkraut & mustard, served with fries or salad. - $14' ],
+        [ 'Salt & Pepper Calamari Salad', 'Salt & Pepper Calamari with grilled baby vegetables, season leaves, avocado & citrus herb dressing - $16' ],
+        [ 'LBQ Burger ', '200g beef patty, confit onions, parmesan crisp, free range bacon in a cafe de paris buttered milk bun - $20' ],
+        [ 'Cheeseburger', 'Beef, aioli, relish, pickled red onion, smoked swiss cheese - $16' ],
+        [ 'Mushroom and Bean Burger', 'Roasted garlic, salad greens, grilled eggplant and tomato relish on sourdough. V - $17' ],
+        [ 'Fried Chicken Burger', 'Fried chicken, crispy free range bacon, pickled chilli, aioli, slaw. - $17' ],
+        [ 'Parrotdog Pilsner Battered Fish Burger', 'Parrotdog Pilsner Battered Fish with slaw, tartare and salsa - $18' ],
+        [ 'Lamb Burger', 'Seasoned lamb patty, mint salsa, rocket, hummus, raita and goats feta - $17.50' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
