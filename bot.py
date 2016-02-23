@@ -13,29 +13,29 @@ from email.mime.text import MIMEText
 
 orders = {}
 needs_size = {
-   'lbq': range(0,5)
+   'lbq': range(0,7)
 }
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
         [ 'Margaret & Rita', 'Sliced tomato with fresh basil and even fresher buffalo mozzarella. V - $20' ],
         [ 'The Old Bean', 'Pork belly, pickled chilli, coriander, mozzarella and tomato. V - $24' ],
-        [ 'I Am The Eggplant', 'Grilled eggplant, halloumi, salsa, cherry tomatos, mozzarella. - $23' ],
+        [ 'Hot Pan!', 'Seasoned chicken, chilli, tomato, cream cheese, coriander, mozzarella. V - $23' ],
+        [ 'I Am The Eggplant', 'Grilled eggplant, haloumi, tomato salsa, mozzarella. - $23' ],
         [ 'Wheel of Pork', 'Bacon, prosciutto, pork belly, confit onions, BBQ sauce. - $24' ],
-        [ '"Not When We\'re Busy"', 'Lamb, rosemary, confit onions, goats feta, garlic oil, cherry tomato, mozzarella. - $24.50' ],
-        [ 'Gnome Garden', 'Roasted pumpkin, toasted seeds, goats feta, pickled red onion, tomato, mozzarella. - $22.50' ],
+        [ '"Not When We\'re Busy"', 'Lamb, rosemary, confit onions, goats feta, garlic oil, mozzarella. - $24.50' ],
+        [ 'Gnome Garden', 'Roasted pumpkin, toasted seeds, goats feta, pickled red onion, mozzarella. - $22.50' ],
 
         # Mains
-        [ 'Mussels', 'A dozen steamed green lip mussels with white wine cream, fresh salsa and Leeds St sourdough. - $19' ],
-        [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad and grilled lemon. - $22.50' ],
+        [ 'Pork Ribs', '1/2kg of free range bbq pork ribs served with slaw and handcut chips. - $22'],
+        [ 'Mussels', 'A dozen steamed green lip mussels with white wine cream, fresh salsa and ciabatta. - $19' ],
+        [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad, tartare and grilled lemon. - $22.50' ],
         [ 'Ham & Smoked Swiss Cheese Toasted Sandwich', 'On Leeds St sourdough, with sauerkraut & mustard, served with fries or salad. - $14' ],
-        [ 'Salt & Pepper Calamari Salad', 'Salt & Pepper Calamari with grilled baby vegetables, season leaves, avocado & citrus herb dressing - $16' ],
-        [ 'LBQ Burger ', '200g beef patty, confit onions, parmesan crisp, free range bacon in a cafe de paris buttered milk bun - $20' ],
-        [ 'Cheeseburger', 'Beef, aioli, relish, pickled red onion, smoked swiss cheese - $16' ],
-        [ 'Mushroom and Bean Burger', 'Roasted garlic, salad greens, grilled eggplant and tomato relish on sourdough. V - $17' ],
-        [ 'Fried Chicken Burger', 'Fried chicken, crispy free range bacon, pickled chilli, aioli, slaw. - $17' ],
-        [ 'Parrotdog Pilsner Battered Fish Burger', 'Parrotdog Pilsner Battered Fish with slaw, tartare and salsa - $18' ],
-        [ 'Lamb Burger', 'Seasoned lamb patty, mint salsa, rocket, hummus, raita and goats feta - $17.50' ],
+        [ 'Roasted Vegetable Salad', 'Roasted seasonal vegetables, rocket, toasted seeds, seasonal leaves, haloumi and citrus herb dressing. - $16, add chicken +$8' ],
+        [ 'Cheeseburger', '200g beef patty, pickled red onion, aioli, relish & smoked cheddar. - $16, Add bacon and/or avo +$4 each' ],
+        [ 'Vegan Burger', 'Za\'atar spiced pumpkin, salad greens, grilled eggplant, onion, sesame sauce on a vegan bun. - $17' ],
+        [ 'Fried Chicken Burger', 'Fried chicken, crispy free range bacon, pickled chilli, aioli, relish, slaw. - $17' ],
+        [ 'Lamb Burger', 'Seasoned lamb patty, mint salsa, rocket, hummus and goats feta - $17.50' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
