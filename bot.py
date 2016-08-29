@@ -27,15 +27,14 @@ menus = {
         [ 'Gnome Garden', 'Roasted pumpkin, toasted seeds, goats feta, pickled red onion, mozzarella. - $22.50' ],
 
         # Mains
-        [ 'Pork Ribs', '1/2kg of free range bbq pork ribs served with slaw and handcut chips. - $22'],
-        [ 'Mussels', 'A dozen steamed green lip mussels with white wine cream, fresh salsa and ciabatta. - $19' ],
+        [ 'Soup of the Day', 'Soup of the day served with Leeds St Bakery polenta sourdough. - $12'],
+        [ 'Cashew, Broccoli and Miso Risotto', 'Cashew, broccoli and miso risotto with alfalfa sprouts and sesame seeds (Vegan). - $17' ],
         [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad, tartare and grilled lemon. - $22.50' ],
-        [ 'Ham & Smoked Swiss Cheese Toasted Sandwich', 'On Leeds St sourdough, with sauerkraut & mustard, served with fries or salad. - $14' ],
-        [ 'Roasted Vegetable Salad', 'Roasted seasonal vegetables, rocket, toasted seeds, seasonal leaves, haloumi and citrus herb dressing. - $16, add chicken +$8' ],
-        [ 'Cheeseburger', '200g beef patty, pickled red onion, aioli, relish & smoked cheddar. - $16, Add bacon and/or avo +$4 each' ],
-        [ 'Vegan Burger', 'Za\'atar spiced pumpkin, salad greens, grilled eggplant, onion, sesame sauce on a vegan bun. - $17' ],
-        [ 'Fried Chicken Burger', 'Fried chicken, crispy free range bacon, pickled chilli, aioli, relish, slaw. - $17' ],
-        [ 'Lamb Burger', 'Seasoned lamb patty, mint salsa, rocket, hummus and goats feta - $17.50' ],
+        [ 'Roasted Winter Vegetable Salad', 'Roasted seasonal vegetables, with feta cheese, pickled seasonal vegetables, avocado, rocket and alfalfa sprouts. - $17, add chicken +$7' ],
+        [ 'Cheeseburger', '200g beef patty, cheddar, pickles lettuce. - $16' ],
+        [ 'Vegan Burger', 'Za\'atar spiced pumpkin, grilled eggplant, tahini, confit onion, rocket. - $17' ],
+        [ 'Chicken Burger', 'Fried chicken, crispy free range bacon, cheese, hot sauce, pickles, lettuce. - $18' ],
+        [ 'Lamb Burger', 'Seasoned lamb patty, feta, hummus, yoghurt, rocket - $17.50' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
@@ -66,17 +65,17 @@ menus = {
 emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Hugh Davenport <hugh@davenport.net.nz>',
+        'Haydn Newport <haydn@newport.net.nz>',
         'Haydn Newport <haydn@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Hugh Davenport <hugh@davenport.net.nz>',
+        'Haydn Newport <haydn@newport.net.nz>',
         'Haydn Newport <haydn@catalyst.net.nz>',
     ],
     'arizona': [
         'Arizona <cu@arizona.co.nz>',
-        'Hugh Davenport <hugh@davenport.net.nz>',
+        'Haydn Newport <haydn@newport.net.nz>',
         'Haydn Newport <haydn@catalyst.net.nz>',
     ],
 }
