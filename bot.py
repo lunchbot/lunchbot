@@ -18,22 +18,23 @@ needs_size = {
 menus = {
     'lbq': [
         # Two for One Tuesday Menu Pizzas.
-        [ 'Margaret & Rita', 'Sliced tomato with fresh basil and even fresher buffalo mozzarella. V - $20' ],
-        [ 'The Old Bean', 'Pork belly, pickled chilli, coriander, mozzarella and tomato. V - $24' ],
-        [ 'Hot Pan!', 'Seasoned chicken, chilli, tomato, cream cheese, coriander, mozzarella. V - $23' ],
-        [ 'I Am The Eggplant', 'Grilled eggplant, haloumi, tomato salsa, mozzarella. - $23' ],
-        [ 'Wheel of Pork', 'Bacon, prosciutto, pork belly, confit onions, BBQ sauce. - $24' ],
-        [ '"Not When We\'re Busy"', 'Lamb, rosemary, confit onions, goats feta, garlic oil, mozzarella. - $24.50' ],
-        [ 'Gnome Garden', 'Roasted pumpkin, toasted seeds, goats feta, pickled red onion, mozzarella. - $22.50' ],
+        [ 'Maggie May Pizza', 'Pomodoro sauce, mozzarella, basil, parmesan. V - $23' ],
+        [ 'Nandor Tanczos Pizza', 'Grilled zuchini, feta, mint, pine nuts, dressed rocket. V - $23' ],
+        [ '"Old red eyes is back" Pizza', 'House smoked chicken, sriracha sauce, coriander/lime pesto, philly cream cheese. - $23' ],
+        [ 'We love meat Pizza', 'House smoked chicken, bacon, bbq sauce, confit onion, prosciutto. - $25' ],
+        [ 'Wallace Pizza', 'Spiced Italian pork sausage, mushroom, parmesan, balsamic red peppers. - $24' ],
+        [ 'Gnome Garden Pizza', 'Baby spinach, ricotta, preserved lemon, olives, confit garlic oil. - $23' ],
+        [ '"Nothing is too much trouble" Pizza', 'Lamb kofta, spiced date chutney, olives, pine nuts. - $24' ],
 
         # Mains
-        [ 'Soup of the Day', 'Soup of the day served with Leeds St Bakery polenta sourdough. - $12'],
-        [ 'Cashew, Broccoli and Miso Risotto', 'Cashew, broccoli and miso risotto with alfalfa sprouts and sesame seeds (Vegan). - $17' ],
+        [ 'Vegan Rissoto', 'Cashew, broccoli and miso risotto served with alfalfa sprouts and sesame seeds. - $17' ],
         [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad, tartare and grilled lemon. - $22.50' ],
         [ 'Roasted Winter Vegetable Salad', 'Roasted seasonal vegetables, with feta cheese, pickled seasonal vegetables, avocado, rocket and alfalfa sprouts. - $17, add chicken +$7' ],
+
+        [ 'LBQ Burger', '200g beef patty, cheddar cheese, free range bacon, jalapenos, avocado, pickles, lettuce. - $19' ],
         [ 'Cheeseburger', '200g beef patty, cheddar, pickles lettuce. - $16' ],
         [ 'Vegan Burger', 'Za\'atar spiced pumpkin, grilled eggplant, tahini, confit onion, rocket. - $17' ],
-        [ 'Chicken Burger', 'Fried chicken, crispy free range bacon, cheese, hot sauce, pickles, lettuce. - $18' ],
+        [ 'Fried Chicken Burger', 'Free range southern fried chicken, cheddar cheese, hot sauce, free range bacon, pickles, lettuce. - $18' ],
         [ 'Lamb Burger', 'Seasoned lamb patty, feta, hummus, yoghurt, rocket - $17.50' ],
     ],
     'lbqthurs' : [
