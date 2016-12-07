@@ -27,15 +27,15 @@ menus = {
         [ '"Nothing is too much trouble" Pizza', 'Lamb kofta, spiced date chutney, olives, pine nuts. - $24' ],
 
         # Mains
-        [ 'Vegan Rissoto', 'Cashew, broccoli and miso risotto served with alfalfa sprouts and sesame seeds. - $17' ],
+        [ 'Corn Fritters', 'Corn fritters with smokey barbeque baked beans and slaw. - $17' ],
         [ 'Parrotdog Pilsner Battered Fish & Chips', 'Battered Fish & Chips with salad, tartare and grilled lemon. - $22.50' ],
-        [ 'Roasted Winter Vegetable Salad', 'Roasted seasonal vegetables, with feta cheese, pickled seasonal vegetables, avocado, rocket and alfalfa sprouts. - $17, add chicken +$7' ],
+        [ 'Summer Salad', 'Orzo salad with cherry tomato, asparagus, olives, pine nuts and feta, with a lemon basil dressing - $17' ],
 
         [ 'LBQ Burger', '200g beef patty, cheddar cheese, free range bacon, jalapenos, avocado, pickles, lettuce. - $19' ],
         [ 'Cheeseburger', '200g beef patty, cheddar, pickles lettuce. - $16' ],
-        [ 'Vegan Burger', 'Za\'atar spiced pumpkin, grilled eggplant, tahini, confit onion, rocket. - $17' ],
+        [ 'Vegan Burger', 'Corn fritter, avocado, fresh tomato, coriander & lime pesto, hot sauce. - $15' ],
         [ 'Fried Chicken Burger', 'Free range southern fried chicken, cheddar cheese, hot sauce, free range bacon, pickles, lettuce. - $18' ],
-        [ 'Lamb Burger', 'Seasoned lamb patty, feta, hummus, yoghurt, rocket - $17.50' ],
+        [ 'Reinheitsgeburger', 'WOAP Burger, back for december. Price unknown, probably not on two-for-one.' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
