@@ -66,8 +66,7 @@ menus = {
 emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Haydn Newport <haydn@newport.net.nz>',
-        'Haydn Newport <haydn@catalyst.net.nz>',
+        'Sam Bonner <samb@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
@@ -81,7 +80,7 @@ emails = {
     ],
 }
 
-fromemail = 'Lunchbot (Haydn Newport) <haydn@catalyst.net.nz>'
+fromemail = 'Lunchbot (Sam Bonner) <samb@catalyst.net.nz>'
 toemail = None
 
 menu = None
@@ -91,13 +90,12 @@ protocols = []
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
 ignore_nick = []
 admin_nick = [ 'aquaman',
-               'aqualaptop',
                'heiko',
                'wi11',
-               'haydn',
                'haydnn',
                'kaotien',
-               'florent'
+               'tintin',
+               'Neil',
              ]
 admin_commands = [ 'send',
                    'open',
