@@ -35,7 +35,6 @@ menus = {
         [ 'Cheeseburger', '200g beef patty, cheddar, pickles lettuce. - $16' ],
         [ 'Vegan Burger', 'Corn fritter, avocado, fresh tomato, coriander & lime pesto, hot sauce. - $15' ],
         [ 'Fried Chicken Burger', 'Free range southern fried chicken, cheddar cheese, hot sauce, free range bacon, pickles, lettuce. - $18' ],
-        [ 'Reinheitsgeburger', 'WOAP Burger, back for december. Price unknown, probably not on two-for-one.' ],
     ],
     'lbqthurs' : [
         [ 'Summer Salad', 'Mixed leaf salad with artichoke hearts, cherry tomatoes, French beans and tapenade. GF, VG - $10'],
