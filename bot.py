@@ -67,6 +67,7 @@ emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
         'Sam Bonner <samb@catalyst.net.nz>',
+        'Neil Bertram <neil@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
@@ -307,7 +308,7 @@ class Bot(irc.IRCClient):
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
             body += '\n\nThanks, can we please get a reply to confirm this order?\n\n'
-            body += 'Cheers, Haydn\n021 032 8216';
+            body += 'Cheers, Sam\n0274 198 432';
 
             self.msg(channel, body)
 
