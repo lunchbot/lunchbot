@@ -65,8 +65,8 @@ menus = {
 emails = {
     'lbq': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
-        'Haydn Newport <haydn@newport.net.nz>',
-        'Haydn Newport <haydn@catalyst.net.nz>',
+        'Sam Bonner <samb@catalyst.net.nz>',
+        'Neil Bertram <neil@catalyst.net.nz>',
     ],
     'lbqxmas': [
         'Little Beer Quarter <littlebeerquarter@xtra.co.nz>',
@@ -80,7 +80,7 @@ emails = {
     ],
 }
 
-fromemail = 'Lunchbot (Haydn Newport) <haydn@catalyst.net.nz>'
+fromemail = 'Lunchbot (Sam Bonner) <samb@catalyst.net.nz>'
 toemail = None
 
 menu = None
@@ -90,13 +90,13 @@ protocols = []
 disabled_commands = []#'help', 'menu', 'info', 'order', 'cancel', 'list', 'open', 'close']
 ignore_nick = []
 admin_nick = [ 'aquaman',
-               'aqualaptop',
                'heiko',
                'wi11',
-               'haydn',
                'haydnn',
                'kaotien',
-               'florent'
+               'tintin',
+               'Neil',
+               'samb'
              ]
 admin_commands = [ 'send',
                    'open',
@@ -308,7 +308,7 @@ class Bot(irc.IRCClient):
                 body += '\n%dx %s %s[%s]' % \
                     (len(n), menu[o[0]][0], instr, ','.join(n))
             body += '\n\nThanks, can we please get a reply to confirm this order?\n\n'
-            body += 'Cheers, Haydn\n021 032 8216';
+            body += 'Cheers, Sam\n0274 198 432';
 
             self.msg(channel, body)
 
