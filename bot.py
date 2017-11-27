@@ -96,6 +96,7 @@ admin_nick = [ 'aquaman',
                'kaotien',
                'tintin',
                'Neil',
+               'samb'
              ]
 admin_commands = [ 'send',
                    'open',
